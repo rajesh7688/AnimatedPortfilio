@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Didact+Gothic&family=Ephesis&family=Martian+Mono:wght@600&family=Roboto+Mono&family=Saira+Semi+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+html,
+body {
+  /* box-sizing: border-box; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#loader {
+  width: 100%;
+  height: 100vh;
+  /* position: relative; */
+  background-color: #000;
+  color: #fff;
+}
+
+#loader #topheading {
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  color: #fff;
+  text-align: center;
+}
+
+#loader h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  font-weight: 500;
+  width: 100%;
+}
+
+.reveal .parent {
+  display: block;
+  /* background-color: red; */
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.reveal .parent .child {
+  display: inline-block;
+  width: 100%;
+
+  /* transform: translate(0, 0%); */
+}
+
+.parent .child span {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+#green {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(199, 194, 185);
+}
+
+#home {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 100%;
+  background-color: #f2efef;
+}
+
+#home #nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 0 5vw;
+  align-items: center;
+  /* background-color: red; */
+  text-transform: uppercase;
+}
+
+#nav a {
+  position: relative;
+  color: #000;
+  font-size: 13px;
+  font-weight: 100;
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+#nav a .line1 {
+  position: absolute;
+  width: 100%;
+  background-color: #000;
+  height: 0.5px;
+  right: 0;
+  bottom: 0;
+  transition: all 1s ease;
+  display: inline-block;
+}
+
+#nav a .line2 {
+  position: absolute;
+  width: 0%;
+  background-color: #000;
+  height: 0.5px;
+  left: 0;
+  bottom: 0;
+  transition: all 1s ease;
+  transition-delay: 0.2s;
+  display: inline-block;
+}
+
+#nav a:hover .line1 {
+  width: 0%;
+}
+
+#nav a:hover .line2 {
+  width: 100%;
+}
+
+.maxWidth {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#designContainer #centerText {
+  display: flex;
+  justify-content: center;
+}
+
+#designContainer #centerText h1 {
+  font-size: calc(12.10938vw + 15px);
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #383838;
+}
+
+.smallTextBox {
+  width: 100%;
+  display: flex;
+  padding-top: 3.18%;
+  justify-content: space-around;
+  color: #a2a2a2;
+}
+
+.smallTextBox h5 {
+  font-weight: 400;
+}
+
+.smallTextBox .for {
+  font-family: "Permanent Marker", cursive;
+}
