@@ -147,7 +147,7 @@ body {
 
 #designContainer #centerText {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #designContainer #centerText h1 {
@@ -171,4 +171,27 @@ body {
 
 .smallTextBox .for {
   font-family: "Permanent Marker", cursive;
+}
+
+#centerText .arrow {
+  display: flex;
+  align-items: center;
+}
+
+#centerText .arrow img {
+}
+
+.c-visual {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.c-visual svg {
+  height: calc(8.10938vw + 15px);
+}
+
+path,
+polyline {
+  stroke: #14cf93;
 }
