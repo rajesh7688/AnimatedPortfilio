@@ -1,18 +1,5 @@
 let tl = gsap.timeline();
 
-// .to("#green", {
-//   height: "100%",
-//   duration: 3,
-//   delay: -3,
-//   ease: Expo.easeInOut,
-// });
-// .to("#offwhite", {
-//   height: "100%",
-//   duration: 3,
-//   delay: -2.6,
-//   ease: Expo.easeInOut,
-// })
-
 function revealToSpan() {
   document.querySelectorAll(".reveal").forEach((item) => {
     let spanParent = document.createElement("span");
@@ -26,7 +13,12 @@ function revealToSpan() {
     item.appendChild(spanParent);
   });
 }
-revealToSpan();
+
+function valueSatters() {
+  // gsap.set("#designContainer .bounding h1", {
+  //   y: "100%",
+  // });
+}
 
 const loaderAnimation = () => {
   tl.from(".child span", {
@@ -49,20 +41,17 @@ const loaderAnimation = () => {
       height: "100%",
       top: 0,
       duration: 1.3,
-      delay: -2,
+      delay: -1.5,
       ease: Circ.easeInOut,
     })
     .to("#green", {
       height: "0%",
       duration: 1,
       delay: -0.6,
-      ease: Circ.easeInOut,
-    })
-    .to("#home", {
-      top: "0%",
-      duration: 2,
-      delay: -2.3,
-      ease: Circ.easeInOut,
+      ease: Power3,
+      onComplete: function () {
+        animateHomeHeading();
+      },
     });
 };
 
@@ -70,7 +59,6 @@ const visualAnimate = () => {
   const svg = document.querySelectorAll("#Visual>g");
   svg.forEach((e) => {
     let path = e.childNodes[1].childNodes[1];
-    console.log(path.style);
     path.style.strokeDasharray = path.getTotalLength() + "px";
     path.style.strokeDashoffset = path.getTotalLength() + "px";
   });
@@ -78,10 +66,20 @@ const visualAnimate = () => {
   gsap.to("#Visual>g>g>path, #Visual>g>g>polyline", {
     strokeDashoffset: 0,
     duration: 2,
-    delay: 5,
+    delay: 7,
     ease: Power3,
   });
 };
 
+const animateHomeHeading = () => {
+  gsap.to("#designContainer .bounding h1", {
+    scaleY: 1,
+    // y: "0%",
+    duration: 1.4,
+  });
+};
+
+revealToSpan();
 loaderAnimation();
 visualAnimate();
+// ;
